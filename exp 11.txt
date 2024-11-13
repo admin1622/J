@@ -1,0 +1,35 @@
+Exp.No.11:- Write a java program in which data is read from one file and should be written in another file line by line.
+Code:
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+public class FileInOut {
+public static void main(String[] args) {
+File inputFile = new File("C:\\Exp\\input.txt");
+File outputFile = new File("C:\\Exp\\output.txt");
+FileReader ins = null; //ins is a reference variable 
+FileWriter outs = null; // outs is a reference variable
+try { 
+ ins = new FileReader(inputFile); 
+ outs = new FileWriter(outputFile);  
+ int ch; 
+ while ((ch = ins.read()) != -1) {
+ outs.write(ch); 
+ } 
+ } 
+catch (IOException e) { 
+ e.printStackTrace(); 
+ System.exit(-1); 
+ } 
+finally { // resource clean up block
+ try { 
+ ins.close(); 
+ outs.close(); 
+ } 
+ catch (IOException e) {
+ } 
+ }
+}
+}
+

@@ -1,0 +1,29 @@
+Program 6:Constructor Overloading
+class Nokia1
+{
+    Nokia1()
+    {
+        System.out.println("Constructor Without parameter ");
+    }
+    Nokia1(int x,int y)
+    {
+       System.out.println("Constructor with parameter");
+    }
+    void setmic()
+    {
+        System.out.println("parent mic set successfully.");
+    }
+}
+public class Funcover {
+    public static void main(String[] args) {
+        Nokia1 E1=new Nokia1(1,3);
+        Nokia1 E2=new Nokia1();
+        
+    }
+    
+}
+
+Output:
+Constructor with parameter
+Constructor Without parameter
+

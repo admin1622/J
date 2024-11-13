@@ -1,0 +1,103 @@
+import java.util.Scanner;
+
+class Player {
+    String name;
+    int age;
+
+    Player(String n, int m) {
+        name = n;
+        age = m;
+    }
+
+    void show() {
+        System.out.println("Name of the player: " + name);
+        System.out.println("Age of the player: " + age);
+    }
+}
+
+class Cricket_Player extends Player {
+    String type;
+
+    Cricket_Player(String n, int m, String t) {
+        super(n, m);
+        type = t;
+    }
+
+    @Override
+    public void show() {
+        super.show();
+        System.out.println("Player Type is: " + type);
+    }
+}
+
+class Football_Player extends Player {
+    String type;
+
+    Football_Player(String n, int m, String t) {
+        super(n, m);
+        type = t;
+    }
+
+    @Override
+    public void show() {
+        super.show();
+        System.out.println("Player Type is: " + type);
+    }
+}
+
+class Hockey_Player extends Player {
+    String type;
+
+    Hockey_Player(String n, int m, String t) {
+        super(n, m);
+        type = t;
+    }
+
+    @Override
+    public void show() {
+        super.show();
+        System.out.println("Player Type is: " + type);
+    }
+}
+
+public class MainDemo {
+    public static void main(String[] Args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter name of Cricket Player: ");
+        String cricketName = sc.nextLine();
+        System.out.print("Enter age of Cricket Player: ");
+        int cricketAge = sc.nextInt();
+        sc.nextLine(); // Consume newline
+        System.out.print("Enter type of Cricket Player: ");
+        String cricketType = sc.nextLine();
+        Cricket_Player c = new Cricket_Player(cricketName, cricketAge, cricketType);
+
+        System.out.print("Enter name of Football Player: ");
+        String footballName = sc.nextLine();
+        System.out.print("Enter age of Football Player: ");
+        int footballAge = sc.nextInt();
+        sc.nextLine(); // Consume newline
+        System.out.print("Enter type of Football Player: ");
+        String footballType = sc.nextLine();
+        Football_Player f = new Football_Player(footballName, footballAge, footballType);
+
+        System.out.print("Enter name of Hockey Player: ");
+        String hockeyName = sc.nextLine();
+        System.out.print("Enter age of Hockey Player: ");
+        int hockeyAge = sc.nextInt();
+        sc.nextLine(); // Consume newline
+        System.out.print("Enter type of Hockey Player: ");
+        String hockeyType = sc.nextLine();
+        Hockey_Player h = new Hockey_Player(hockeyName, hockeyAge, hockeyType);
+
+        System.out.println();
+        c.show();
+        System.out.println();
+        f.show();
+        System.out.println();
+        h.show();
+
+        sc.close();
+    }
+}

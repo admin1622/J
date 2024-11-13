@@ -1,0 +1,83 @@
+PROGRAM 5: COMPARISION OF TWO RECTANGLES
+
+import java.util.Scanner;
+class rectangle {
+    
+    double l,w,a;
+    String color;
+    rectangle(){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Attributes ");
+        System.out.println("Enter the length: ");
+        l=sc.nextDouble();
+        System.out.println("Enter the width: ");
+        w=sc.nextDouble();
+        a=l*w;
+        System.out.println("Area ="+a);
+        System.out.println("Enter the color: ");
+        color=sc.next();
+        
+    }
+    
+}
+    public class main {
+
+    public static void main(String[] args){
+
+        rectangle r1 = new rectangle();
+        rectangle r2 =new rectangle();
+
+        if(r1.a ==r2.a && r1.color.equals(r2.color))
+        {
+            System.out.println("r1 is  equal to r2");
+        }
+        else
+        {
+            System.out.println("r1 is not equal to r2");
+        }
+    }
+    
+}
+
+
+
+OUTPUT:
+Enter the Attributes 
+Enter the length: 
+10
+Enter the width: 
+12
+Area =120.0
+Enter the color: 
+red
+Enter the Attributes 
+Enter the length: 
+10
+Enter the width:
+12
+Area =120.0
+Enter the color:
+red
+r1 is  equal to r2
+
+
+Enter the Attributes 
+Enter the length:
+10
+Enter the width:
+11
+Area =110.0
+Enter the color:
+blue
+Enter the Attributes
+Enter the length:
+2
+Enter the width:
+4
+Area =8.0
+Enter the color:
+red
+r1 is not equal to r2
+
+
+
